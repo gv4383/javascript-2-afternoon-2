@@ -194,7 +194,35 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, item) {
+  if (myGroceryList && item) {
+    if (myGroceryList.includes(item)) {
+      for (let i = 0; i < myGroceryList.length; i++) {
+        if (item === myGroceryList[i]) {
+          //remove it
+          myGroceryList.splice(i, 1);
+          return myGroceryList
+        }
+      }
+    }
+    else {
+      return myGroceryList;
+    }
+  }
+  else {
+    return [];
+  }
+}
+
+function addItem(myGroceryList, item) {
+  if (myGroceryList && item) {
+    myGroceryList.push(item);
+    return myGroceryList;
+  }
+  else {
+    return [];
+  }
+}
 
 
 
@@ -204,7 +232,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker() {
+  let newArr = [];
+  for (let i = 0; i < 215; i++) {
+    newArr.push(i + 1);
+  }
+  return newArr
+}
 
 
 
@@ -220,7 +254,16 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen(numbers) {
+  // let newArr = [];
+  // for (let i = 0; i < numbers.length; i++) {
+  //   newArr.push(parseInt(numbers[i], 10))
+  //   newArr[i] += 10;
+  // }
+  let newArr = numbers.map((val, i, arr) => parseInt(val, 10));
+  newArr.forEach((val, i, arr) => arr[i] = val + 10)
+  return newArr;
+}
 
 
 
@@ -245,7 +288,14 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-//Code Here
+function longer(arr1, arr2) {
+  if (arr1.length > arr2.length) {
+    return arr1;
+  }
+  else {
+    return arr2;
+  }
+}
 
 
 
@@ -257,7 +307,10 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2) {
+  let similar = [];
+  for (let i in 
+}
 
 
 
