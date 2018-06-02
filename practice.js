@@ -309,7 +309,12 @@ function longer(arr1, arr2) {
 
 function both(arr1, arr2) {
   let similar = [];
-  for (let i in 
+  for (let i = 0; i < arr1.length; i++) {
+    if (arr2.includes(arr1[i])) {
+      similar.push(arr1[i]);
+    }
+  }
+  return similar;
 }
 
 
@@ -350,7 +355,8 @@ var colt = {
   After that console.log the length of the Array and make sure that it's equal to 4. 
 */
 
-//Code Here
+devMountainEmployees.push(tyler, cahlan, ryan, colt);
+console.log(devMountainEmployees.length);
 
 
 
@@ -359,7 +365,11 @@ var colt = {
   Loop through your devMountainEmployees until you find cahlan, then remove him from the array.
 */
 
-//Code Here
+for (let i = 0; i < devMountainEmployees.length; i++) {
+  if (devMountainEmployees[i].name === "Cahlan") {
+    devMountainEmployees.splice(i, 1);
+  }
+}
 
 
 
@@ -371,7 +381,7 @@ var colt = {
   Create an empty array called users.
 */
 
-//Code Here
+let users = [];
 
 
 
@@ -390,7 +400,21 @@ var user1 = {
 };
 // Do not edit the code above.
 
-//Code Here
+let user2 = {
+  name: "Joe Shmoe",
+  email: "joe@gmail.com",
+  password: "imnotsure",
+  username: "welp"
+}
+
+let user3 = {
+  name: "Sarah Mills",
+  email: "imsarah@gmail.com",
+  password: "passnotword",
+  username: "imuser"
+}
+
+users.push(user1, user2, user3);
 
 
 
@@ -404,7 +428,11 @@ var user1 = {
   Once you find the particular index he's located in, delete him from the array.
 */
 
-//Code Here
+for (let i = 0; i < users.length; i++) {
+  if (users[i].name === "Tyler McGinnis") {
+    users.splice(i, 1);
+  }
+}
 
 
 
